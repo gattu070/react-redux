@@ -2,12 +2,12 @@ import './App.css';
 import HomeContainer from './containers/HomeContainer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./css/style.css";
-import { Navbar } from './components/Navbar';
+import NavbarContainer from './containers/NavbarContainer';
 
 function App() {
   return (
     <>
-      <Navbar />
+      <NavbarContainer />
       <HomeContainer />
     </>
   );

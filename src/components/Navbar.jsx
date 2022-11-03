@@ -1,6 +1,7 @@
-import React from 'react'
+import React from 'react';
 
-export const Navbar = () => {
+function Navbar (props) {
+    console.log("nav", props.data.length);
     return (
         <nav className="navbar navbar-expand-sm navbar-light bg-light">
             <div className="container">
@@ -14,15 +15,9 @@ export const Navbar = () => {
                         <li className="nav-item">
                             <a className="nav-link active" href="#" aria-current="page">Home <span className="visually-hidden">(current)</span></a>
                         </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="#">Link</a>
-                        </li>
-                        <li className="nav-item dropdown">
-                            <a className="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                            <div className="dropdown-menu" aria-labelledby="dropdownId">
-                                <a className="dropdown-item" href="#">Action 1</a>
-                                <a className="dropdown-item" href="#">Action 2</a>
-                            </div>
+                        <li className="nav-item position-relative">
+                            <a className="nav-link" href="#"><i class="fa-solid fa-cart-shopping text-dark fs-5"></i></a>
+                            <span className="cart-count text-white bg-danger rounded-circle px-1 py-0">{props.data.length}</span>
                         </li>
                     </ul>
                     <form className="d-flex my-2 my-lg-0">
@@ -34,3 +29,5 @@ export const Navbar = () => {
         </nav>
     )
 }
+
+export default Navbar;
