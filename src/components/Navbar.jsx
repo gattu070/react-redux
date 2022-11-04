@@ -17,7 +17,7 @@ function Navbar (props) {
                         </li>
                         <li className="nav-item position-relative">
                             <a className="nav-link" href="#"><i class="fa-solid fa-cart-shopping text-dark fs-5"></i></a>
-                            <span className="cart-count text-white bg-danger rounded-circle px-1 py-0">{props.data.length}</span>
+                            <span className={`${props.data.length>0 ? 'd-inline-block' : 'd-none'} cart-count text-white bg-danger rounded-circle px-1 py-0`}>{props.data.length}</span>
                         </li>
                     </ul>
                     <form className="d-flex my-2 my-lg-0">
