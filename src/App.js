@@ -1,7 +1,6 @@
-import './App.css';
-import HomeContainer from './containers/HomeContainer';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import "./css/style.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import HomeContainer from './containers/HomeContainer';
 import NavbarContainer from './containers/NavbarContainer';
 
 function App() {

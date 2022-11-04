@@ -6,7 +6,7 @@ const initialSate = {
 }
 
 export default function cardItems(state = [], action) {
-    console.log("reducer", action);
+    // console.log("reducer", action);
     switch (action.type) {
         case ADD_TO_CART:
             return [

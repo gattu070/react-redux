@@ -16,7 +16,7 @@ function Navbar (props) {
                             <a className="nav-link active" href="#" aria-current="page">Home <span className="visually-hidden">(current)</span></a>
                         </li>
                         <li className="nav-item position-relative">
-                            <a className="nav-link" href="#"><i class="fa-solid fa-cart-shopping text-dark fs-5"></i></a>
+                            <a className="nav-link" href="#"><i className="fa-solid fa-cart-shopping text-dark fs-5"></i></a>
                             <span className={`${props.data.length>0 ? 'd-inline-block' : 'd-none'} cart-count text-white bg-danger rounded-circle px-1 py-0`}>{props.data.length}</span>
                         </li>
                     </ul>
