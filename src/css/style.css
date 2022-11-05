@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 * {
     margin: 0;
     padding: 0;
@@ -6,13 +6,17 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
+}
+
+a {
+    text-decoration: none;
 }
 
 .card {
     width: 290px;
     border-radius: 8px;
-    transition: all .2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
 .card:hover {
@@ -36,7 +40,12 @@ body {
     font-size: 10px !important;
     position: absolute;
     top: 0px;
-    left: 22px;
+}
+
+@media screen and (min-width:769px) {
+    .cart-count {
+        left: 22px;
+    }
 }
 
 .heart-icon {
@@ -46,6 +55,32 @@ body {
     fill: red;
 }
 
-.heart-icon:hover {
-    fill: red;
+.navbar-toggler {
+    border: 0px !important;
+}
+
+.form-control {
+    width: auto;
+}
+
+@media screen and (min-width:769px) {
+    .form-control {
+        width: 100%;
+    }
+}
+
+.first {
+    --animate-duration: 0.3s;
+}
+
+.sec {
+    --animate-duration: 0.5s;
+}
+
+.thir {
+    --animate-duration: 0.7s;
+}
+
+.for {
+    --animate-duration: 0.9s;
 }

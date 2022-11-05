@@ -1,5 +1,6 @@
 import React from 'react';
 import { AiOutlineHeart } from "react-icons/ai";
+import NavbarContainer from "../containers/NavbarContainer";
 
 const productData = [
     {
@@ -22,8 +23,9 @@ const productData = [
 export const Home = (props) => {
     // console.log(props.data.length);
     return (
-        <div className='Home'>
-            <div className="container">
+        <div className='Home animate-in'>
+            <NavbarContainer />
+            <div className="container animate__animated animate__fadeInUp">
                 <h1 className='text-center pt-3'>Home</h1>
 
                 <div className='card-wrapper pt-3'>
@@ -41,7 +43,7 @@ export const Home = (props) => {
                                         <div className="card-bottom d-flex justify-content-between align-items-center">
                                             <button
                                                 className="btn btn-outline-primary"
-                                                onClick={() => props.addToCartHandler({ name: product.name, price: product.price })}
+                                                onClick={() => props.addToCartHandler({ name: product.name, price: product.price, img: product.image })}
                                             >
                                                 Add to cart
                                             </button>
