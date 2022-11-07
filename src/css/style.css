@@ -1,18 +1,38 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+body::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* Hide scrollbar for IE, Edge and Firefox */
+
 body {
-    font-family: 'Poppins', sans-serif;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+a {
+    text-decoration: none;
 }
 
 .card {
     width: 290px;
-    border-radius: 8px;
-    transition: all .2s ease-in-out;
+    /* border-radius: 8px; */
+    border: 0;
+    transition: all 0.2s ease-in-out;
+    padding: 0;
 }
 
 .card:hover {
@@ -20,12 +40,19 @@ body {
 }
 
 .card-img-top {
-    padding-bottom: 10px;
+    /* padding-bottom: 10px; */
+    /* box-shadow: 0px 10px 15px gray; */
+    border-radius: 14px;
 }
 
 .card-body {
     padding: 0;
-    padding-top: 10px !important;
+    /* margin-top: 10px; */
+    padding: 19px;
+    padding-top: 0;
+    background-color: #f5f5f5;
+    /* background-color: black; */
+    border-radius: 0 0 20px 20px;
 }
 
 .card-bottom {
@@ -36,16 +63,105 @@ body {
     font-size: 10px !important;
     position: absolute;
     top: 0px;
-    left: 22px;
+}
+
+@media screen and (min-width: 769px) {
+    .cart-count {
+        left: 22px;
+    }
 }
 
 .heart-icon {
-    width: 30px;
-    height: 30px;
+    /* width: 30px;
+    height: 30px; */
+    font-size: 30px;
     color: red;
-    fill: red;
+    /* fill: red; */
+    /* background: red; */
+    margin-right: 10px;
 }
 
-.heart-icon:hover {
-    fill: red;
+.navbar-toggler {
+    border: 0px !important;
+}
+
+.form-control {
+    width: auto;
+}
+
+@media screen and (min-width: 769px) {
+    .form-control {
+        width: 100%;
+    }
+}
+
+.first {
+    --animate-duration: 0.3s;
+}
+
+.sec {
+    --animate-duration: 0.5s;
+}
+
+.thir {
+    --animate-duration: 0.7s;
+}
+
+.for {
+    --animate-duration: 0.9s;
+}
+
+.img-bg {
+    padding: 19px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    /* background-color: black; */
+    border-radius: 20px 20px 0 0;
+}
+
+.card-title {
+    font-weight: bold;
+    margin: 0;
+}
+
+.card-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    font-size: 15px;
+}
+
+.card h4 {
+    font-weight: lighter;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.card h4 span {
+    color: rgb(8, 178, 8);
+    padding-right: 10px;
+}
+
+.card h4 strike {
+    font-size: 18px;
+}
+
+.card .btn {
+    border-radius: 99px;
+    padding: 0.385rem 0.95rem;
+}
+
+.title-bg {
+    padding: 0.505rem 1rem;
+    background-color: #f5f5f5;
+    border-radius: 99px;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
