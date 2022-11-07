@@ -14,21 +14,27 @@ export const Cart = (props) => {
           <div className="row justify-content-around gap-4">
             {
               props?.data?.map((data, index) => {
-                return <div key={index} className="card col-12 md:col-6 lg:col-4 p-3 px-4">
-                  <img src={data?.cardData.img} className="card-img-top w-50 h-50 mx-auto" alt="..." />
-                  <hr />
-                  <div className="card-body">
+                return <div key={index} className="card col-12 md:col-6 lg:col-4">
+                  <div className='title-bg'>
                     <h5 className="card-title">{data?.cardData.name}</h5>
-                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <h4> <b>${data.cardData.price}</b> </h4>
+                    <i className="fa-solid fa-chevron-right"></i>
+                  </div>
+                  <div className='img-bg'>
+                    <img src={data?.cardData.img} className="card-img-top w-50 h-100 mx-auto" alt="..." />
+                  </div>
+                  {/* <hr /> */}
+                  <div className="card-body">
+                    <p className="card-text">{data?.cardData.desc}</p>
+                    <h4> <span>${data.cardData.price}</span> <strike>${data.cardData.oldprice}</strike></h4>
                     <div className="card-bottom d-flex justify-content-between align-items-center">
                       <button
                         className="btn btn-outline-primary"
-                        // onClick={() => props.addToCartHandler({ name: product.name, price: product.price })}
+                      // onClick={() => props.addToCartHandler({ name: product.name, price: product.price, img: product.image })}
                       >
                         Add to cart
                       </button>
-                      <AiOutlineHeart className='heart-icon' />
+                      {/* <AiOutlineHeart className='heart-icon' /> */}
+                      <i className="fa-regular fa-heart heart-icon"></i>
                     </div>
                   </div>
                 </div>
