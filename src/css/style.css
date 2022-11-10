@@ -27,12 +27,36 @@ a {
     text-decoration: none;
 }
 
+.navbar .react-bubbly-transitions__bubbly-link {
+    color: gray !important;
+    /* padding: 0 5px; */
+}
+
+.navbar .form-control {
+    border-radius: 20px !important;
+}
+
+.navbar .form-control:focus {
+    outline: 0 !important;
+    box-shadow: none;
+}
+
+.navbar .btn {
+    border-radius: 20px !important;
+}
+
 .card {
     width: 290px;
     /* border-radius: 8px; */
     border: 0;
     transition: all 0.2s ease-in-out;
     padding: 0;
+}
+
+.merged {
+    /* box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; */
+    /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+    border-radius: 20px;
 }
 
 .card:hover {
@@ -154,6 +178,7 @@ a {
 .card .btn {
     border-radius: 99px;
     padding: 0.385rem 0.95rem;
+    border: 2px solid;
 }
 
 .title-bg {

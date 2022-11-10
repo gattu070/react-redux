@@ -1,5 +1,5 @@
 import { ADD_TO_CART } from "../constants";
-import { REMOVE_TO_CART } from "../constants";
+import { ADD_TO_WISHLIST } from "../constants";
 
 export const addToCart = (data) => {
     console.log("action", data);
@@ -9,9 +9,10 @@ export const addToCart = (data) => {
     }
 }
 
-export const removeToCart = (data) => {
+export const addToWish = (wdata) => {
+    console.log("action", wdata);
     return {
-        type: REMOVE_TO_CART,
-        data: data
+        type: ADD_TO_WISHLIST,
+        wdata: wdata
     }
 }
